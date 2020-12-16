@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="signup.css">
+    <script type="text/javascript" src="val.js">
+
+    </script>
     <title>PROJECT-WORK-1</title>
 
     <!--Navbar-->
@@ -23,7 +26,7 @@
 
             <a class="navbar-brand" href="#">
 
-                <img src="/images/bmsce.jpg" width="32" height="32" class="d-inline-block align-top" alt="" loading="lazy">
+                <img src="bmsce.jpg" width="32" height="32" class="d-inline-block align-top" alt="" loading="lazy">
                 <b style="color: white;" id="mybmsce">MY BMSCE</b>
             </a>
 
@@ -31,8 +34,8 @@
             <div class="progress-bar" id="progress-bar"></div>
             <div class="text">
         </nav>
-        <div class="sg">
-            <a href="login.html"><button id="b2" class="btn btn-primary" type="submit" style="margin-left: 890px;"><b>LOG IN</b></button></a>
+        <div class="sg" >
+            <a href="userslogin.html"><button id="b2" class="btn btn-primary" type="submit" style="margin-left: 890px;"><b>LOG IN</b></button></a>
         </div>
 
 
@@ -44,10 +47,8 @@
 <div class="main">
 
     <!-- Material form register -->
-    <div class="card" style="
-    
-      background: linear-gradient(120deg, rgb(233, 86, 86) 0%, orange 25%,lightblue 50%,rgb(241, 116, 137) 75%,rgb(71, 240, 71) 100%);">
-        <img src="/images/bmsce.jpg" id="signupimg" alt="">
+    <div class="card" style="background: url(backg1.jpg); background-size:cover;">
+        <img src="bmsce.jpg" id="signupimg" alt="">
         <h5 id="mainhead" style="padding: 15px; text-align: center;" class="">
             <strong>SIGN UP PAGE</strong>
         </h5>
@@ -56,20 +57,20 @@
         <div class="card-body px-lg-5 pt-0">
 
             <!-- Form -->
-            <form class="text-center" style="color: black;" action="#!">
+            <form class="text-center" style="color: yellow;" action="#!">
 
                 <div class="form-row">
                     <div class="col">
                         <!-- First name -->
                         <div class="md-form">
-                            <input id="input" type="text" id="materialRegisterFormFirstName" class="form-control">
-                            <label for="m id=" input " aterialRegisterFormFirstName"><b>FIRST NAME</b><span id="star">*</span></label>
+                            <input id="input" type="text" id="materialRegisterFormFirstName" name="FName" class="form-control">
+                            <label for="materialRegisterFormFirstName"><b>FIRST NAME</b><span id="star">*</span></label>
                         </div>
                     </div>
                     <div class="col">
                         <!-- Nick name -->
                         <div class="md-form">
-                            <input id="input" type="email" id="materialRegisterFormLastName" class="form-control">
+                            <input id="input" type="text" id="materialRegisterFormLastName" name="LName" class="form-control">
                             <label for="materialRegisterFormLastName"><b>NICK NAME</b><span id="star">*</span></label>
                         </div>
                     </div>
@@ -77,33 +78,33 @@
 
                 <!-- E-mail -->
                 <div class="md-form mt-0">
-                    <input id="input" type="email" id="materialRegisterFormEmail" class="form-control">
+                    <input id="input" type="email" name="Email"id="materialRegisterFormEmail" name="Email" class="form-control">
                     <label for="materialRegisterFormEmail"><b>E-MAIL</b><span id="star">*</span></label>
                 </div>
 
                 <!-- phone number -->
                 <div class="md-form mt-0">
-                    <input id="input" type="number" id="materialRegisterFormEmail" class="form-control">
+                    <input id="input" type="number" id="materialRegisterFormEmail" name="Phone" class="form-control">
                     <label for="materialRegisterFormEmail"><b>PHONE NUMBER</b></label>
                     <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-                        <b>Not Mandatory</b>
+                        <b style="color: #dafcb6;">Not Mandatory</b>
                     </small>
                 </div>
                 <!-- Password -->
                 <div class="md-form">
-                    <input id="input" type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+                    <input id="input" type="password" id="pass"id="materialRegisterFormPassword" name="Pass" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
                     <label for="materialRegisterFormPassword"><b>PASSWORD</b><span id="star">*</span></label>
                     <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-                        <b>At least 8 characters and 1 digit</b>
+                        <b style="color: #dafcb6;">At least 8 characters and 1 digit</b>
                     </small>
                 </div>
 
                 <!-- Confirm Password -->
                 <div class="md-form">
-                    <input id="input" type="password" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock">
+                    <input id="input" type="password" id="confpass" id="materialRegisterFormPassword" name="Confpass" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
                     <label for="materialRegisterFormPhone"><b>CONFIRM PASSWORD</b><span id="star">*</span></label>
                     <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-                        <b>Verifying Password</b>
+                        <b style="color: #dafcb6;">Verifying Password</b>
                     </small>
                 </div>
 
@@ -111,7 +112,7 @@
 
 
                 <!-- Sign up button -->
-                <a href="index1.html"><button id="submitbtn" class="btn btn-primary" type="submit" style=""><b>SIGN UP</b></button></a>
+                <!--<a href="/Users/kiranmk/Documents/FINAL PROJECT/index1.html">--><!--</a>-->
 
                 <!-- Social register -->
                 <p><b>or sign up with :</b></p>
@@ -133,7 +134,8 @@
                 </a>
                 <hr>
                 <p><b>Already a member?</b>
-                    <a href="login.html"><b>Log in</b></a>
+                  <!--  <a href="/Users/kiranmk/Documents/FINAL PROJECT/login.html"><b>Log in</b></a>-->
+
                 </p>
                 <!-- Link for Demo Video -->
                 <p><b>Before clicking</b>
@@ -142,11 +144,12 @@
 
             </form>
             <!-- Form -->
-
+<button onclick="Start()" id="submitbtn" class="btn btn-primary" type="submit" style=""><b>SIGN UP</b></button>
         </div>
 
     </div>
     <!-- Material form register -->
+
 </div>
 
 <!--This is the Footer The Copyright-->
@@ -191,6 +194,7 @@
 
                 scrolled + "%";
         };
+
     </script>
 
     <!--All the required Bootstrap Links-->
