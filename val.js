@@ -32,17 +32,29 @@ function Start()
     {
       alert("INVALID PHONE NUMBER! PLEASE ENTER A VALID PHONE NUMBER!!!!");
     }
-    if(input.Pass.value != input.Confpass.value)
+
+    if( passwordValidation()==false )
     {
       alert("Password and Confirm password dont match!!");
     }
-    if(emailValidation()==true&&phoneValidation()==true&&(input.Pass.value == input.Confpass.value))
+    if(emailValidation()==true&&phoneValidation()==true&&(passwordValidation()==true))
     {
       location.replace("success.html");
 
     }
   }
-
+function passwordValidation()
+{
+  var p = input.Pass.value;
+  var c = input.Confpass.value;
+  if(p!=c)
+  {
+    return false;
+  }
+  else {
+    return true;
+  }
+}
 
 function phoneValidation()
 {
