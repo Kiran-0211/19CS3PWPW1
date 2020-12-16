@@ -27,7 +27,7 @@ function MoveOnStudent()
 {
   if(emailValidation())
   {
-    location.replace("chem.html");//html link for student landing page
+    location.replace("chem.html");
   }
   else {
     alert("INVALID EMAIL ID. PLEASE TRY AGAIN");
@@ -47,7 +47,7 @@ function MoveOnSenior()
 //login: professor
 function MoveOnProfessor()
 {
-  if(emailValidation())
+  if(emailProfessorValidation())
   {
     location.replace("chem.html");//html link for professor landing page
   }
