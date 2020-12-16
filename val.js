@@ -10,17 +10,53 @@ function emailValidation()
     return true;
   }
 }
-function MoveOn()
+function emailProfessorValidation()
+{
+  var val = input.Email.value.search(/[a-z]+.[a-z]{3}@bmsce.ac.in/i);
+  if(val == -1)
+  {
+    return false;
+
+  }
+  else {
+    return true;
+  }
+}
+//Login: student
+function MoveOnStudent()
 {
   if(emailValidation())
   {
-    location.replace("/Users/kiranmk/Documents/FINAL PROJECT/chem.html");
+    location.replace("chem.html");
   }
   else {
     alert("INVALID EMAIL ID. PLEASE TRY AGAIN");
   }
 }
-function Start()
+//login: senior
+function MoveOnSenior()
+{
+  if(emailValidation())
+  {
+    location.replace("chem.html");//html link for senior landing page
+  }
+  else {
+    alert("INVALID EMAIL ID. PLEASE TRY AGAIN");
+  }
+}
+//login: professor
+function MoveOnProfessor()
+{
+  if(emailValidation())
+  {
+    location.replace("chem.html");//html link for professor landing page
+  }
+  else {
+    alert("INVALID EMAIL ID. PLEASE TRY AGAIN");
+  }
+}
+//signup: student and senior
+function StartS()
 {
 
 
@@ -43,6 +79,30 @@ function Start()
 
     }
   }
+  //sign up: professor
+  function StartP()
+  {
+
+
+      if(emailProfessorValidation()==false)
+      {
+        alert("INVALID EMAIL! PLEASE ENTER COLLEGE EMAIL ID ONLY!!!!");
+      }
+      if(phoneValidation()==false)
+      {
+        alert("INVALID PHONE NUMBER! PLEASE ENTER A VALID PHONE NUMBER!!!!");
+      }
+
+      if( passwordValidation()==false )
+      {
+        alert("Password and Confirm password dont match!!");
+      }
+      if(emailProfessorValidation()==true&&phoneValidation()==true&&(passwordValidation()==true))
+      {
+        location.replace("success.html");
+
+      }
+    }
 function passwordValidation()
 {
   var p = input.Pass.value;
