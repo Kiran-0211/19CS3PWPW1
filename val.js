@@ -27,7 +27,7 @@ function MoveOnStudent()
 {
   if(emailValidation())
   {
-    location.replace("chem.html");
+    location.replace("chem.html");//html link for student landing page
   }
   else {
     alert("INVALID EMAIL ID. PLEASE TRY AGAIN");
